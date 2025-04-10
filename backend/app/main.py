@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.db.database import Base, engine
 from app.api.routes import auth
 from app.api.routes import private
+from app.api.routes import admin
 
 # ========================
 # Crear todas las tablas en la base de datos
@@ -23,3 +24,4 @@ app = FastAPI(
 # ========================
 app.include_router(auth.router)
 app.include_router(private.router)
+app.include_router(admin.router)

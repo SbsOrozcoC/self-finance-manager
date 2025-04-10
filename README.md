@@ -18,7 +18,7 @@ Desarrollado con **FastAPI (Backend)** y **Vue (Frontend)**.
 
 ## 🚀 Estructura general
 
-elf-finance-manager/ 
+self-finance-manager/ 
 ├── backend/ 
 │ ├── app/ 
 │ │ ├── api/ # Rutas del API 

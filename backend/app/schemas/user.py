@@ -31,3 +31,12 @@ class UserResponse(UserBase):
 class UserLogin(BaseModel):
     username: str
     password: str
+
+# ========================
+# Esquema para actualizar usuarios
+# (solo algunos campos son opcionales)
+# ========================
+class UserUpdate(BaseModel):
+    email: Optional[EmailStr] = None
+    is_active: Optional[bool] = None
+    role: Optional[str] = None
