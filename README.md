@@ -9,7 +9,10 @@ Desarrollado con **FastAPI (Backend)** y **Vue (Frontend)**.
 
 - 🐍 Python 3.11
 - ⚡ FastAPI
-- 🎨 Vue.js (en construcción)
+- 🎨 Vue.js 3 + TypeScript
+    - Vue Router
+    - Axios con JWT
+    - Estilos externos con CSS modularizado
 - 🐘 PostgreSQL
 - 🐳 Docker + Docker Compose
 - 🔒 OAuth2.0 con JWT (autenticación)
@@ -29,7 +32,7 @@ self-finance-manager/
 │ ├── main.py # Punto de entrada de la aplicación 
 │ ├── Dockerfile 
 │ └── requirements.txt 
-├── frontend/ # Proyecto en Vue (por construir) 
+├── frontend/ # Proyecto en Vue3
 ├── docker-compose.yml 
 ├── .env 
 ├── .gitignore 
@@ -119,6 +122,20 @@ docker exec -it self-finance-manager-db-1 psql -U finance_user -d finance_db
 - Fase 4: Reportes exportables y envío por correo
 
 - Fase 5: Integración del frontend en Vue
+
+
+✅ Cambios recientes (última sesión)
+🎨 Se desarrolló e integró el módulo de Login desde Vue, con validación contra FastAPI
+
+🧑‍💻 Se aplicaron estilos y centrado responsivo al formulario
+
+🔒 Se configuró CORS en FastAPI para aceptar peticiones desde el frontend
+
+📦 Se activó localStorage para almacenar el token JWT tras el login
+
+🔐 Se protegió la ruta /dashboard para que solo usuarios autenticados accedan
+
+⚙️ Se implementó estructura de frontend desacoplada del backend vía Docker o npm run serve
 
 
 ## 👨‍💻 Autor
