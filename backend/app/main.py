@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 from app.db.database import Base, engine
 from app.api.routes import auth
 from app.api.routes import private
@@ -17,6 +19,17 @@ app = FastAPI(
     title="Self Finance Manager API",
     description="API de gestión financiera personal",
     version="1.0.0"
+)
+
+# ========================
+# Middleware de CORS
+# ========================
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:8081"],  # ← Aquí se habilita tu frontend
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ========================
